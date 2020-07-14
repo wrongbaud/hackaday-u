@@ -1,6 +1,6 @@
 # Session Three Exercises
 
-These exercises are designed to illusrate the principals that are covered in the course materials, for session two we have the following exercises:
+These exercises are designed to illusrate the principals that are covered in the course materials, for session three we have the following exercises:
 
 * structs
 * pointers
