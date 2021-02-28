@@ -72,10 +72,12 @@ int main(int argc, char * argv[])
     for(pwordLen = 0; pwordLen < strlen(info.password);pwordLen++ ){
         if(username[pwordLen] != info.password[pwordLen]){
             printf("Invalid character in password detected, exiting now!\r\n");
+            free(info.password);
             return -1;
         }
     }
 
     printf("Correct! Access granted!\r\n");
+    free(info.password);
     return 0;
 }
