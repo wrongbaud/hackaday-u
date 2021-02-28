@@ -11,8 +11,8 @@ struct userinfo {
     int (*calc)(int a, int b);
 };
 
-void swapNames(char *a, char*b){
-    char *tmp = malloc(sizeof(a));
+void swapNames(char **a, char**b){
+    char *tmp;
     tmp = *a;
     *a = *b;
     *b = tmp;
@@ -77,6 +77,5 @@ int main(int argc, char * argv[])
     }
 
     printf("Correct! Access granted!\r\n");
-    free(info.password);
     return 0;
 }
