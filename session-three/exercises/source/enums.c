@@ -13,8 +13,8 @@ struct userinfo {
     int (*calc)(int a, int b);
 };
 
-void swapNames(char *a, char*b){
-    char *tmp = malloc(sizeof(a));
+void swapNames(char **a, char **b){
+    char *tmp;
     tmp = *a;
     *a = *b;
     *b = tmp;
