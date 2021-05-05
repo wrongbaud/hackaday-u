@@ -19,10 +19,9 @@ int keyCalc(int a, int b){
 }
 
 int gen_password(struct userinfo* info){
-    int count = strlen(info->username);
     int x = 0;
     char * pass = malloc(info->nameLen);
-    for(x = 0; x < count; x++){
+    for(x = 0; x < info->nameLen; x++){
         pass[x] = ((char)info->username[x] + (char)info->key)^ (char)info->realKey;
         pass[x] = pass[x] - 0x13;
     }
@@ -52,9 +51,7 @@ int main(int argc, char * argv[])
             printf("Not enough values in keyfile, please try again!\r\n");
             return -1;
         }
-        nameLen = bytesRead-1;
     }
-    info.nameLen = nameLen;
     info.key = key;
 
     
@@ -66,10 +63,12 @@ int main(int argc, char * argv[])
         username = malloc(0x255);
         bytesRead = read(unameFd,username,0x255);
         if(bytesRead < 8){
-            printf("Not enough values in keyfile, please try again!\r\n");
+            printf("Not enough values in username file, please try again!\r\n");
             return -1;
         }
+        nameLen = bytesRead-1;
     }
+    info.nameLen = nameLen;
 
     int pwordFd = open(pwordFile,O_RDONLY);
     if(pwordFd == -1){
@@ -79,7 +78,7 @@ int main(int argc, char * argv[])
         password = malloc(0x255);
         bytesRead = read(pwordFd,password,0x255);
         if(bytesRead < 8){
-            printf("Not enough values in keyfile, please try again!\r\n");
+            printf("Not enough values in password file, please try again!\r\n");
             return -1;
         }
     }
@@ -91,7 +90,7 @@ int main(int argc, char * argv[])
     info.password = password;
     gen_password(&info);
     int pwordLen = 0;
-    for(pwordLen = 0; pwordLen < strlen(info.password);pwordLen++ ){
+    for(pwordLen = 0; pwordLen < info.nameLen;pwordLen++ ){
         if(password[pwordLen] != info.password[pwordLen]){
             printf("Invalid character in password detected, exiting now!\r\n");
             return -1;
