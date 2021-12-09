@@ -11,8 +11,8 @@ struct userinfo {
     int (*calc)(int a, int b);
 };
 
-void swapNames(char *a, char*b){
-    char *tmp = malloc(sizeof(a));
+void swapNames(char **a, char**b){
+    char *tmp;
     tmp = *a;
     *a = *b;
     *b = tmp;
@@ -72,6 +72,7 @@ int main(int argc, char * argv[])
     for(pwordLen = 0; pwordLen < strlen(info.password);pwordLen++ ){
         if(username[pwordLen] != info.password[pwordLen]){
             printf("Invalid character in password detected, exiting now!\r\n");
+            free(info.password);
             return -1;
         }
     }
