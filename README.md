@@ -21,6 +21,7 @@ Each folder contains exercises and examples for the topics that were covered in 
 The source will be released to the challenges, however if you have a writeup that you would like included in this repository, reach out or submit a pull request and we will review it to be added to the repo!
 ### List of Solution Walkthroughs
 * [Session one exercises c1-c4](https://medium.com/@Haddock22/start-your-career-in-cybersecurity-hackaday-ghidra-exercises-walkthrough-part-1a-b552f3fdc67c)
+* [Session one exercises nasm crack, skele, simplegenkey](https://medium.com/@Haddock22/start-your-career-in-ethical-hacking-hackaday-ghidra-exercises-walkthrough-part-1b-7b6e43ccecb5)
 ## Contributing
 
 Did I miss something or make a mistake (almost certainly!) - let me know and submit a PR!
