@@ -23,6 +23,7 @@ The source will be released to the challenges, however if you have a writeup tha
 * [Session one exercises c1-c4](https://medium.com/@Haddock22/start-your-career-in-cybersecurity-hackaday-ghidra-exercises-walkthrough-part-1a-b552f3fdc67c)
 * [Session one exercises nasm crack, skele, simplegenkey](https://medium.com/@Haddock22/start-your-career-in-ethical-hacking-hackaday-ghidra-exercises-walkthrough-part-1b-7b6e43ccecb5)
 * [Session two exercises](https://medium.com/@Haddock22/start-your-career-in-cybersecurity-hackaday-ghidra-exercises-walkthrough-part-2-7cc2692054be)
+* [Session three exercises](https://medium.com/@Haddock22/start-your-career-in-ethical-hacking-hackaday-ghidra-exercises-walkthrough-part-3-531519cb4093)
 ## Contributing
 
 Did I miss something or make a mistake (almost certainly!) - let me know and submit a PR!
